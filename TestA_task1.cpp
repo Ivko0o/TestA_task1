@@ -23,7 +23,13 @@ int main()
 	cout << "Enter radius(r1): ";
 	cin >> r1;
 	cout << endl;
-	
+
+	//This validates if the radius is positive number
+	while (r1 <= 0) {
+		cout << "You need to enter a positive number for the radius" << endl;
+		cout << "Try again: ";
+		cin >> r1;
+	}
 
 	//This part will take the coordinates and the radius of the second circle
 	cout << "Enter three integers for the coordinates of the first circle: " << endl;
@@ -37,6 +43,14 @@ int main()
 	cout << "Enter radius(r2): ";
 	cin >> r2;
 	cout << endl << endl;
+
+
+	//This validates if the radius is positive number
+	while (r2 <= 0) {
+		cout << "You need to enter a positive number for the radius" << endl;
+		cout << "Try again: ";
+		cin >> r2;
+	}
 
 	//This caclulates the distance needed between the two circle centers
 	distance= sqrt(((x1 - x2) * (x1 - x2)) + ((y1 - y2) * (y1 - y2)));
